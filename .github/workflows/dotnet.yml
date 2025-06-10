@@ -45,4 +45,4 @@ jobs:
        CHROMEWEBDRIVER: /usr/bin/google-chrome
       run: |
        echo "Running TestProject3 tests"
-       dotnet test TestProject3/TestProject2.csproj --verbosity normal
+       dotnet test TestProject3/TestProject3.csproj --verbosity normal
