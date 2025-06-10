@@ -23,12 +23,12 @@ jobs:
        sudo apt-get update
        sudo apt-get install -y google-chrome-stable
     - name: Restore dependencies
-      run: dotnet restore SleniumBasicExercise.sln
+      run: dotnet restore SeleniumBasicExercise.sln
     - name: Build
-      run: dotnet build SleniumBasicExercise.sln --no-restore
+      run: dotnet build SeleniumBasicExercise.sln --no-restore
     - name: Run TestProject1 tests
       env: 
        CHROMEWEBDRIVER: /usr/bin/google-chrome
       run: |
        echo "Running TestProject1 tests"
-       ditnet test TestProject1/TestProject1csproj --verbosity normal
+       ditnet test TestProject1/TestProject1.csproj --verbosity normal
