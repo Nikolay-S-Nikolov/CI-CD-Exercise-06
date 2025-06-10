@@ -26,12 +26,13 @@ namespace TestProject1
             options.AddArgument("disable-dev-shm-usage");
             options.AddArgument("disable-gpu");
             options.AddArgument("window-size=1920x1080");
-            options.AddArgument("dissable-extensions");
+            options.AddArgument("disable-extensions");
             options.AddArgument("remote-debugging-port=9222");
 
             driver = new ChromeDriver(options);
+            //driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Url = "http://127.0.0.1:5500/index.html";
+            driver.Url = "https://ci-cd-exercise-02.onrender.com/";
 
             textBoxFirstNum = driver.FindElement(By.Id("number1"));
             dropDownOperation = driver.FindElement(By.Id("operation"));
